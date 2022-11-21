@@ -17,6 +17,7 @@ class Left(Event):
 class Right(Event):
     pass
 
+
 class EventFactory(ABC):
     @abstractmethod
     def new_voice_event(event: Event):

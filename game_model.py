@@ -13,16 +13,17 @@ class Level:
         self.duration = default_duration
 
 
-
 class GameModel:
     def __init__(self) -> None:
         self.current_level = Level(sample_level_data, 10)
-        self.keystroke_data = None
-        self.voice_data = None
         self.prompt_index = 0
         self.current_prompt = self.current_level.event_pairs[self.prompt_index]
 
-    def evaluate_responses(self):
+    def next_prompt(self):
+        self.prompt_index += 1
+        self.current_prompt = self.current_level.event_pairs[self.prompt_index]
+
+    def evaluate_responses(self, responses: list):
         pass
 
 
