@@ -11,9 +11,5 @@ class Controller:
 
     def game_loop(self):
         self.window.show_prompts(self.game_model.current_prompt)
-
-        
-        # result = self.game_model.evaluate_responses(self.game_model.current_prompt)
-        # self.ui.play_feedback(result)
-        
-
+        # wait for one keyboard and one voice command(?)
+        self.game_model.next_prompt()
